@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexiworker UF</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!---->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo"><img src="logga.png" alt=""></a>
+
+        <ul class="navbar">
+            <li><a href="index.html">HEM</a></li>
+            <li class="fet-title"><a href="bemanning.html">BEMANNING</a></li>
+            <li class="fet-title"><a href="profil.html">SKAPA PROFIL</a></li>
+            <li><a href="om-oss.html">OM OSS</a></li>
+            <li><a href="kontakta-oss.html">KONTAKTA OSS</a></li>
+
+        </ul>
+
+        <div class="h-right">
+            <a href="https://www.instagram.com/flexiworker_uf/"><i class="ri-instagram-fill"></i></a>
+            <a href="https://www.tiktok.com/flexiworker_uf/"><i class="ri-tiktok-fill"></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+
+        </div>
+    </header>
+
+    <section class="profil">
+        <div class="profil-container">
+            <h2>Skapa din profil</h2>
+            <p>Skapa din profil och få exponering mot företag</p>
+
+            <form action="https://formkeep.com/f/278078f52659"
+            accept-charset="UTF-8"
+            enctype="multipart/form-data"
+            method="POST">
+      
+          <!-- Namn -->
+          <div class="form-group">
+              <label for="first-name">Namn</label>
+              <input type="text" id="first-name" name="first_name" placeholder="Ditt förnamn" required>
+          </div>
+      
+          <!-- Efternamn -->
+          <div class="form-group">
+              <label for="last-name">Efternamn</label>
+              <input type="text" id="last-name" name="last_name" placeholder="Ditt efternamn" required>
+          </div>
+      
+          <!-- Email -->
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Din email" required>
+          </div>
+      
+          <!-- Telefonnummer -->
+          <div class="form-group">
+              <label for="phone">Telefonnummer</label>
+              <input type="text" id="phone" name="phone" placeholder="Ditt telefonnummer" required>
+          </div>
+      
+          <!-- Personnummer -->
+          <div class="form-group">
+              <label for="personnummer">Personnummer</label>
+              <input type="text" id="personnummer" name="personnummer" placeholder="Ditt personnummer" required>
+          </div>
+      
+          <!-- CV Upload -->
+          <div class="form-group">
+              <label for="cv">Ladda upp ditt CV</label>
+              <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+          </div>
+      
+          <!-- Personligt Brev Upload -->
+          <div class="form-group">
+              <label for="cover-letter">Ladda upp ditt personliga brev</label>
+              <input type="file" id="cover-letter" name="cover_letter" accept=".pdf,.doc,.docx" required>
+          </div>
+      
+          <!-- Bild Upload -->
+          <div class="form-group">
+              <label for="profile-image">Bild på dig</label>
+              <input type="file" id="profile-image" name="profile_image" accept=".jpg,.jpeg,.png" required>
+          </div>
+      
+          <!-- Framgångs URL -->
+          <input type="hidden" name="success_redirect" value="tack.html">
+      
+          <!-- Misslyckande URL -->
+          <input type="hidden" name="error_redirect" value="https://din-webbplats.com/fel.html">
+      
+          <!-- Skicka-knapp -->
+          <button type="submit" class="submit-btn">Skicka</button>
+      </form>
+        </div>
+    </section>
+
+    
+
+
+        <!--FOOTER SEKTION-->
+
+        <section class="footer">
+            <div class="footer-box">
+                <h3>FLEXIWORKER UF</h3>
+                <a href="index.html">HEM</a>
+                <a href="tjänster.html">BEMANNING</a>
+                <a href="om-oss.html">OM OSS</a>
+                <a href="kontakta-oss.html">KONTAKTA OSS</a>
+            </div>
+    
+                <div class="footer-box">
+                    <h3>KONTAKTA OSS</h3>
+                    <a href="tel:0735174554">Armin: 073 517 45 54</a>
+                    <a href="tel:0721669051">Jonas: 072 166 90 51</a>
+                    <a href="tel:0707654338">Sanaa: 070 765 43 38</a>
+                </div>
+    
+    
+    
+            <div class="footer-box">
+                <h3>Följ oss</h3>
+                <div class="social">
+                    <a href="https://www.instagram.com/flexiworker_uf/"><i class="ri-instagram-fill"></i></a>
+                    <a href="https://www.tiktok.com/@flexiworker_uf"><i class="ri-tiktok-fill"></i></a>
+                </div>
+            </div>
+        </section>
+    
+        <div class="copyright">
+            <p>Made by &copy <a href="https://zolveuf.se/">Zolve UF</a> 2024</p>
+        </div>
+    
+    
+    
+        <script src="script.js"></script>
+
+</body>
+</html>
