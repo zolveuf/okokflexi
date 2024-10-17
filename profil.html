@@ -59,12 +59,16 @@
               <label for="first-name">Namn</label>
               <input type="text" id="first-name" name="first_name" placeholder="Ditt förnamn" required>
           </div>
+
+          
       
           <!-- Efternamn -->
           <div class="form-group">
               <label for="last-name">Efternamn</label>
               <input type="text" id="last-name" name="last_name" placeholder="Ditt efternamn" required>
           </div>
+
+    
       
           <!-- Email -->
           <div class="form-group">
@@ -77,12 +81,111 @@
               <label for="phone">Telefonnummer</label>
               <input type="text" id="phone" name="phone" placeholder="Ditt telefonnummer" required>
           </div>
+
+                    <!-- Adress -->
+                    <div class="form-group">
+                        <label for="last-name">Adress</label>
+                        <input type="text" id="last-name" name="last_name" placeholder="Din adress" required>
+                    </div>
       
           <!-- Personnummer -->
           <div class="form-group">
               <label for="personnummer">Personnummer</label>
               <input type="text" id="personnummer" name="personnummer" placeholder="Ditt personnummer" required>
           </div>
+
+          <div class="form-group">
+            <label for="driving-license">Vilka körkort har du?</label>
+            <div>
+                <input type="checkbox" id="am" name="driving_license[]" value="AM">
+                <label for="am">AM – Moped klass I</label>
+            </div>
+            <div>
+                <input type="checkbox" id="a1" name="driving_license[]" value="A1">
+                <label for="a1">A1 – Lätt motorcykel</label>
+            </div>
+            <div>
+                <input type="checkbox" id="a2" name="driving_license[]" value="A2">
+                <label for="a2">A2 – Mellanstor motorcykel</label>
+            </div>
+            <div>
+                <input type="checkbox" id="a" name="driving_license[]" value="A">
+                <label for="a">A – Tung motorcykel</label>
+            </div>
+            <div>
+                <input type="checkbox" id="b" name="driving_license[]" value="B">
+                <label for="b">B – Personbil och lätt lastbil</label>
+            </div>
+            <div>
+                <input type="checkbox" id="be" name="driving_license[]" value="BE">
+                <label for="be">BE – Personbil med tungt släp</label>
+            </div>
+            <div>
+                <input type="checkbox" id="c1" name="driving_license[]" value="C1">
+                <label for="c1">C1 – Medeltung lastbil</label>
+            </div>
+            <div>
+                <input type="checkbox" id="c" name="driving_license[]" value="C">
+                <label for="c">C – Tung lastbil</label>
+            </div>
+            <div>
+                <input type="checkbox" id="c1e" name="driving_license[]" value="C1E">
+                <label for="c1e">C1E – Medeltung lastbil med tungt släp</label>
+            </div>
+            <div>
+                <input type="checkbox" id="ce" name="driving_license[]" value="CE">
+                <label for="ce">CE – Tung lastbil med tungt släp</label>
+            </div>
+            <div>
+                <input type="checkbox" id="d1" name="driving_license[]" value="D1">
+                <label for="d1">D1 – Liten buss</label>
+            </div>
+            <div>
+                <input type="checkbox" id="d" name="driving_license[]" value="D">
+                <label for="d">D – Buss</label>
+            </div>
+            <div>
+                <input type="checkbox" id="d1e" name="driving_license[]" value="D1E">
+                <label for="d1e">D1E – Liten buss med tungt släp</label>
+            </div>
+            <div>
+                <input type="checkbox" id="de" name="driving_license[]" value="DE">
+                <label for="de">DE – Buss med tungt släp</label>
+            </div>
+            <div>
+                <input type="checkbox" id="traktor" name="driving_license[]" value="Traktor">
+                <label for="traktor">Traktor</label>
+            </div>
+            <!-- Inget alternativ -->
+            <div>
+                <input type="checkbox" id="none" name="driving_license[]" value="Inget">
+                <label for="none">Inget</label>
+            </div>
+        </div>
+        
+        <script>
+            // JavaScript för att avmarkera andra val om "Inget" är valt
+            document.getElementById('none').addEventListener('change', function() {
+                var checkboxes = document.querySelectorAll('input[name="driving_license[]"]');
+                if (this.checked) {
+                    checkboxes.forEach(function(checkbox) {
+                        if (checkbox !== document.getElementById('none')) {
+                            checkbox.checked = false;
+                        }
+                    });
+                }
+            });
+        
+            // Avmarkera "Inget" om andra körkort är valda
+            var otherCheckboxes = document.querySelectorAll('input[name="driving_license[]"]:not(#none)');
+            otherCheckboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.getElementById('none').checked = false;
+                    }
+                });
+            });
+        </script>
       
           <!-- CV Upload -->
           <div class="form-group">
@@ -101,6 +204,12 @@
               <label for="profile-image">Bild på dig</label>
               <input type="file" id="profile-image" name="profile_image" accept=".jpg,.jpeg,.png" required>
           </div>
+
+                    <!-- Övriga dokument -->
+                    <div class="form-group">
+                        <label for="profile-image">Övriga dokument:</label>
+                        <input type="file" id="profile-image" name="profile_image" required>
+                     </div>
       
           <!-- Framgångs URL -->
           <input type="hidden" name="success_redirect" value="tack.html">

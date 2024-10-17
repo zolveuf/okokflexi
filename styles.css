@@ -691,6 +691,18 @@ header.sticky{
     transform: rotate(180deg); /* Rotate when expanded */
 }
 
+.jobb-div .icon {
+    position: absolute;
+    top: 15px; /* Align the icon at the top */
+    right: 15px; /* Align the icon to the right */
+    font-size: 1.25rem;
+    color: #edce51;
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.jobb-div.expanded .icon {
+    transform: rotate(180deg); /* Rotate when expanded */
+}
 .profil-div {
     background-color: #202020;
     padding: 20px;
@@ -705,6 +717,22 @@ header.sticky{
 
 .profil-div.expanded {
     height: 400px; /* Expand to fit all content */
+}
+
+.jobb-div{
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, height 0.3s ease;
+    height: 120px; /* Default height for collapsed state */
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.jobb-div.expanded{
+    height: 300px;
 }
 
 .profil-header {
