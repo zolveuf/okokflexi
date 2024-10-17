@@ -12,29 +12,28 @@ menu.onclick = () => {
     navbar.classList.toggle('open');
 };
 
-/* DROPDOWN MENU */
-const profileToggle = document.getElementById("profile-toggle");
-const dropdownMenu = profileToggle.nextElementSibling;
+document.getElementById("profile-toggle").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
 
-// Function to toggle the dropdown in mobile
-function toggleDropdown(e) {
-    e.preventDefault(); // Prevent the default anchor behavior
-    dropdownMenu.classList.toggle("open"); // Toggle the open class
-}
+    var dropdownMenu = document.getElementById("dropdown-menu");
+    
+    // Toggle the 'show' class
+    dropdownMenu.classList.toggle("show");
+});
 
-// Function to check screen size and adjust behavior
-function setupDropdown() {
-    if (window.innerWidth <= 768) {
-        // For mobile: Attach click event to toggle the dropdown only once
-        profileToggle.addEventListener("click", toggleDropdown);
+function toggleExpand(element) {
+    const icon = element.querySelector('.icon');
+    
+    // Toggle the 'expanded' class to show or hide the audio
+    if (element.classList.contains('expanded')) {
+        element.classList.remove('expanded');
+        icon.innerHTML = '&#9660;'; // Down arrow
     } else {
-        // Remove the click event in desktop view if it was previously added
-        profileToggle.removeEventListener("click", toggleDropdown);
-        // Ensure dropdown is hidden in desktop view until hover
-        dropdownMenu.classList.remove("open");
+        element.classList.add('expanded');
+        icon.innerHTML = '&#9650;'; // Up arrow
     }
 }
 
-// Call setupDropdown initially and on window resize
-setupDropdown();
-window.addEventListener("resize", setupDropdown);
+function toggleExpand(profilElement) {
+    profilElement.classList.toggle('expanded');
+}
