@@ -9,6 +9,9 @@
     scroll-behavior: smooth;
     font-family: 'Open Sans', sans-serif;
 }
+a{
+    color: white;
+}
 :root{
     --text-color: #fff;
     --bg-color: #151515;
