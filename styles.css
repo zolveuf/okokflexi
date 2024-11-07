@@ -726,7 +726,7 @@ header.sticky{
 }
 
 .profil-div.expanded {
-    height: 400px; /* Expand to fit all content */
+    height: 600px; /* Expand to fit all content */
 }
 
 .jobb-div{
@@ -742,7 +742,7 @@ header.sticky{
 }
 
 .jobb-div.expanded{
-    height: 300px;
+    height: 450px;
 }
 
 .profil-header {
