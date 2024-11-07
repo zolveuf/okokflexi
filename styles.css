@@ -742,7 +742,13 @@ header.sticky{
 }
 
 .jobb-div.expanded{
-    height: 450px;
+    height: 30rem;
+}
+
+@media (max-width: 768px) {
+    .jobb-div.expanded{
+        height: 55rem;
+    }
 }
 
 .profil-header {
